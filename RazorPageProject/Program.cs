@@ -1,7 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using RazorPageProject.Models.Data;
+using RazorPageProject.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<DataBaseContext>(
+                                                options => options.UseSqlServer(
+                                                    builder.Configuration["ConnectionStrings:ShoppingConnectionString"]));
 
 var app = builder.Build();
 
