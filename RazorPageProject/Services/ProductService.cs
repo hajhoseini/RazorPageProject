@@ -65,6 +65,7 @@ namespace RazorPageProject.Services
                         .OrderByDescending(p => p.Id).ToList()
                         .Select(p => new ProductDTO
                         {
+                            Id = p.Id,
                             Name = p.Name,
                             Price = p.Price,
                             Description = p.Description
