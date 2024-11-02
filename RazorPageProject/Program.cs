@@ -9,6 +9,7 @@ builder.Services.AddRazorPages();
 builder.Services.AddDbContext<DataBaseContext>(
                                                 options => options.UseSqlServer(
                                                     builder.Configuration["ConnectionStrings:ShoppingConnectionString"]));
+builder.Services.AddTransient<IProductService, ProductService>();
 
 var app = builder.Build();
 
