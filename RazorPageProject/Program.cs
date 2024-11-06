@@ -1,11 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using RazorPageProject.Models.Data;
+using RazorPageProject.Models.Filters;
 using RazorPageProject.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages()
+                .AddMvcOptions(options =>
+                {
+                    options.Filters.Add(new MyPageFilter());
+                })
                 .AddRazorPagesOptions(optins =>
                 {
                     //optins.RootDirectory = "/Content";
