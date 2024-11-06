@@ -1,0 +1,24 @@
+﻿@page
+@model RazorPageProject.Areas.Admin.Pages.Test.IndexModel
+@{
+}
+
+<form method="post" asp-page-handler="Send">
+    <h2>Send</h2>
+    <button type="submit">send</button>
+</form>
+
+<hr />
+
+<form method="post" asp-page-handler="Register">
+    <h2>Register</h2>
+    <button type="submit">Register</button>
+</form>
+
+<hr />
+
+<form method="post">
+    <h2>Send - Register</h2>
+    <button type="submit" asp-page-handler="Send">send</button>
+    <button type="submit" asp-page-handler="Register">Register</button>
+</form>
