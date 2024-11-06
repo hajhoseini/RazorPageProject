@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 using RazorPageProject.Models.Filters;
 
 namespace RazorPageProject.Pages
@@ -16,6 +17,13 @@ namespace RazorPageProject.Pages
         public void OnGet()
         {
 
-        }        
+        }
+
+        public override void OnPageHandlerExecuted(PageHandlerExecutedContext context)
+        {
+            //نوشتن کدهای اختصاصی برای یک page
+
+            base.OnPageHandlerExecuted(context);
+        }
     }
 }
