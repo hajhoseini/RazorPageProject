@@ -1,8 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+using RazorPageProject.Models.Filters;
 
 namespace RazorPageProject.Pages
 {
+    [AddHeader("MyHeader","test.net")]
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
@@ -15,6 +16,6 @@ namespace RazorPageProject.Pages
         public void OnGet()
         {
 
-        }
+        }        
     }
 }
