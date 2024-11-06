@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages()
                 .AddRazorPagesOptions(optins =>
                 {
-                    optins.RootDirectory = "/Content";
+                    //optins.RootDirectory = "/Content";
                 });
 
 builder.Services.AddDbContext<DataBaseContext>(
