@@ -4,7 +4,8 @@ using RazorPageProject.Models.Filters;
 
 namespace RazorPageProject.Pages
 {
-    [AddHeader("MyHeader","test.net")]
+    [MyPageFilter]
+    //[AddHeader("MyHeader","test.net")]
     public class IndexModel : PageModel
     {
         private readonly ILogger<IndexModel> _logger;
