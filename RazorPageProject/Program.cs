@@ -15,6 +15,11 @@ builder.Services.AddDbContext<DataBaseContext>(
                                                 options => options.UseSqlServer(
                                                     builder.Configuration["ConnectionStrings:ShoppingConnectionString"]));
 builder.Services.AddTransient<IProductService, ProductService>();
+builder.Services.Configure<RouteOptions>(options => 
+                            { 
+                                options.LowercaseUrls = true;
+                                options.LowercaseQueryStrings = true;
+                            });
 
 var app = builder.Build();
 
