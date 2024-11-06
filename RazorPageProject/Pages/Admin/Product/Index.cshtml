@@ -7,20 +7,23 @@
     <table class="table">
         <thead>
             <tr>
-                <td>Id</td>
-                <td>Name</td>
-                <td>Price</td>
-                <td>Description</td>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Description</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.Products)
             {
                 <tr>
-                    <td>@item.Id</td>
-                    <td>@item.Name</td>
-                    <td>@item.Price</td>
-                    <td>@item.Description</td>
+                    <th>@item.Id</th>
+                    <th>@item.Name</th>
+                    <th>@item.Price</th>
+                    <th>@item.Description</th>
+                    <th>
+                        <a asp-page = "Delete" asp-route-id = "@item.Id">حذف</a>
+                    </th>
                 </tr>
             }
         </tbody>

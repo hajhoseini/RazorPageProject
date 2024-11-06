@@ -53,6 +53,7 @@ namespace RazorPageProject.Services
             var entity = _context.Product.Find(id);
             return new ProductDTO
             {
+                Id = entity.Id,
                 Name = entity.Name,
                 Price = entity.Price,
                 Description = entity.Description
